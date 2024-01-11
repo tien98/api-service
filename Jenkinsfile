@@ -18,15 +18,15 @@ pipeline {
             }
         }
 
-//         stage('Packaging/Pushing imagae') {
-//
-//             steps {
-//                 withDockerRegistry(credentialsId: 'dockerhub', url: 'https://index.docker.io/v1/') {
-//                     sh 'docker build -t tienqd9999/springboot .'
-//                     sh 'docker push tienqd9999/springboot'
-//                 }
-//             }
-//         }
+        stage('Packaging/Pushing imagae') {
+
+            steps {
+                withDockerRegistry(credentialsId: 'dockerhub', url: 'https://index.docker.io/v1/') {
+                    sh 'docker build -t tienqd9999/api-serivce .'
+                    sh 'docker push tienqd9999/api-serivce'
+                }
+            }
+        }
 //
 //         stage('Deploy MySQL to DEV') {
 //             steps {
